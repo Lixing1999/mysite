@@ -1,0 +1,10 @@
+{% extends 'blog/blogs_list.html' %}
+
+{# 页面标题 #}
+{% block title %}{{ blogs_with_date }}{% endblock %}
+
+{% block blog_list_title %}
+    日期归档：{{ blogs_with_date }}
+    (一共有{{ page_of_blogs.paginator.count }}篇博客)
+    当前页：{{ page_of_blogs.number }}
+{% endblock %}
